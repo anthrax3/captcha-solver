@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+<div class="eg">
+    <p>POST&nbsp;&nbsp;&nbsp;/predict</p>
+    <h4>请求</h4>
+    <div class="eg1">
+        <code>
+            {<br/>
+            &nbsp;&nbsp;"type":&lt;type&gt;<br/>
+            &nbsp;&nbsp;"img_base64":&lt;img_base64&gt;<br/>
+            }
+
+        </code>
+    </div>
+
+    <h4>返回</h4>
+    <div class="eg1">
+        <code>
+            {<br/>
+            &nbsp;&nbsp;"predict":&lt;predict&gt;<br/>
+              "probability":&lt;probability&gt;<br/>
+            }
+
+        </code>
+    </div>
+
+</div>
+
+{% end %}

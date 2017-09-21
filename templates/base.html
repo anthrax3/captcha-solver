@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+
+    <link rel="icon" href="{{ static_url('favicon.ico') }}" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href={{ static_url('bootstrap/3.3.7/css/bootstrap.min.css') }} rel="stylesheet">
+    <link href={{ static_url('base.css') }} rel="stylesheet">
+    <link href={{ static_url('test.css') }} rel="stylesheet">
+    <link href={{ static_url('index.css') }} rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="header">
+    {% block header %}
+    <div id="banner">
+        <h1>CAPTCHA</h1>
+    </div>
+    <div id="nav">
+        <ul class="menu">
+            <li class="item"><a href="./">首页</a></li>
+            <li class="item"><a href="./test">测试</a></li>
+            <li class="item"><a href="./release">版本</a></li>
+            <li class="item"><a href="./about">关于</a></li>
+
+        </ul>
+    </div>
+
+    {% end %}
+
+</div>
+
+<div id="container">
+    {% block container %}
+    <label for="talk">talk</label>
+    <input type="text" id="talk" name="talk" value="">
+    {% end %}
+</div>
+
+<div id="gallery">
+    {% block gallery %}
+    <hr />
+    <table class="table">
+        <caption><h3>types</h3></caption>
+        <thead>
+        <tr>
+            <th>类型</th>
+            <th>示例图片</th>
+            <th>来源</th>
+            <th>准确率</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>type01</td>
+            <td><img src="/classifiers/type01/sample.gif" alt=""></td>
+            <td>北京公积金</td>
+            <td>99%</td>
+        </tr>
+        <tr>
+            <td>type02</td>
+            <td><img src="/classifiers/type02/sample.png" alt=""></td>
+            <td>联通</td>
+            <td>98%</td>
+        </tr>
+        <tr>
+            <td>type03</td>
+            <td><img src="/classifiers/type03/sample.png" alt=""></td>
+            <td>被执行人查询</td>
+            <td>80%</td>
+        </tr>
+
+        </tbody>
+
+
+    </table>
+
+    {% end %}
+</div>
+
+<div id="footer">
+
+</div>
+
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src={{ static_url('jquery-3.2.0.min.js') }}></script>
+<!-- 包括所有已编译的插件 -->
+<script src={{ static_url('bootstrap/3.3.7/js/bootstrap.min.js') }}></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.menu a').each(function (index) {
+            if (this.href.trim() == window.location)
+                $(this).addClass("selected");
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "private": true,
+  "auther":"Cooper",
+  "dependencies": {
+
+    "co": "^4.6.0",
+    "python-shell":"latest"
+  }
+}

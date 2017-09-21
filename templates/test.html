@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+<form enctype="multipart/form-data" action="./test" method="POST" class="form-inline" role="form">
+
+    <div class="form-group">
+        <label for="type">类型：</label>
+        <select name="type" id="type">
+            {% for type in types %}
+            <option value="{{ type }}">{{ type }}</option>
+            {% end %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="img">选择图片：</label>
+        <input type="file" name="img" id="img" accept="image/png,image/gif,image/jpeg" class="btn">
+    </div>
+
+    <div class="form-group">
+        <label for="submit"></label>
+        <input type="submit" name="submit" id="submit" value="提交" class="btn btn-default">
+
+    </div>
+
+
+</form>
+
+<div class="pred">
+    <img src="{{ img_base64 }}" alt="">
+    <span>predicted:&nbsp;</span><span>{{ pred }}</span>
+</div>
+
+
+
+{% end %}
+
+

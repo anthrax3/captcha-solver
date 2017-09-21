@@ -1,0 +1,32 @@
+
+
+.form-group{
+    padding-right: 32px;
+}
+
+input[type=file]{
+    display: inline;
+    width:180px;
+}
+
+select{
+    height:26px;
+}
+
+#submit {
+    width:72px;
+}
+
+.pred{
+    padding-top: 20px;
+}
+
+.pred img {
+    height: 36px;
+    width: 80px;
+}
+
+.pred span{
+    font-size: 18px;
+    padding-left: 10px;
+}
